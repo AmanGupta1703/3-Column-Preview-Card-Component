@@ -1,0 +1,186 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* 
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+*/
+
+/* Resetting the default style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --darker-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-secondary: 'Big Shoulders Display', cursive;
+}
+
+/* Utility classes */
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.bg-color-orange {
+    background-color: var(--bright-orange);
+}
+
+.bg-color-dark-cyan {
+    background-color: var(--dark-cyan);
+}
+
+.bg-color-darker-cyan {
+    background-color: var(--darker-cyan);
+}
+
+/* ************************  */
+
+body {
+    background-color: var(--light-gray);
+    font-family: var(--ff-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.car-box {
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    border-radius: 10px;
+}
+
+.car-item {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 6% 5%;
+    max-width: 380px;
+}
+
+.car-text-content {
+    color: var(--transparent-white);
+}
+
+.big-heading {
+    font-family: var(--ff-secondary);
+    margin: 2rem 0;
+}
+
+.car-description {
+    
+    width: 92%;
+}
+
+.btn {
+    border: none;
+    border: 2px solid var(--transparent-white);
+    border-radius: 20px;
+    margin: 6rem 0 0;
+    padding: 6% 18%;
+}
+
+
+/* Car Sedan */
+.sedan {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.luxury {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*  Car Buttons */
+
+/* Car Sedan */ 
+.sedan-btn {
+    color: var(--bright-orange);
+}
+
+/* SUV Car*/
+.suv-btn {
+    color: var(--dark-cyan);
+}
+
+/* Luxury Car */
+.luxury-btn {
+    color: var(--darker-cyan);
+}
+
+
+/* Hover Status */
+.sedan-btn:hover {
+    background-color: var(--bright-orange);
+    color: var(--transparent-white);
+}
+
+.suv-btn:hover {
+    background-color: var(--dark-cyan);
+    color: var(--transparent-white);
+}
+
+.luxury-btn:hover {
+    background-color: var(--darker-cyan);
+    color: var(--transparent-white);
+}
+
+/* Responsive */
+
+@media (max-width: 786px) {
+    .container {
+        padding: 4% 0;
+    }
+
+    .car-box {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .car-item {
+        padding: 10% 12%;
+        width: 90%;
+    }
+
+    .sedan {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+
+    .big-heading {
+        margin: 1rem 0;
+    }
+
+    .btn {
+        padding: 4% 10%;
+        margin: 2rem 0 0;
+    }
+}
